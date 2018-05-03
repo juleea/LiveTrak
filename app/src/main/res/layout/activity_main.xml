@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".SessionActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <EditText
+        android:id="@+id/coderId"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:hint="@string/coder_id"
+        android:ems="10"
+        android:inputType="textPersonName">
+
+        <requestFocus/>
+    </EditText>
+
+
+    <EditText android:id="@+id/subjectId"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="@string/subject_id"
+        android:ems="10"
+    />
+</LinearLayout>

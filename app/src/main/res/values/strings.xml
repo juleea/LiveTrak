@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">LiveTrak2</string>
+
+    <string name="edit_message">Enter a message</string>
+    <string name="button_right_hand">Right</string>
+    <string name="button_left_hand">Left</string>
+    <string name="button_house">House</string>
+    <string name="button_courtyard">Courtyard</string>
+    <string name="button_end_session">End session</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">LiveTraq</string>
+    <string name="coder_id">Coder ID</string>
+    <string name="subject_id">Subject ID</string>
+    <string name="config_file_name">Configuration File Name</string>
+    <string name="default_config">2014_04_05_bangladesh.csv</string>
+    <string name="new_session">Start New Session</string>
+    <string name="config_dir">ConfigFiles</string>
+
+    <string name="login_activity_session">Login</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

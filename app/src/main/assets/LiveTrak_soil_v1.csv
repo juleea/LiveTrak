@@ -1,0 +1,111 @@
+<COLUMN>,,,,
+#c7cdff,Other water,Other water,Other water,OBJECT CHILD HAND R
+#c7cdff,Stored water,Stored water,Stored water,OBJECT CHILD HAND R
+#c7cdff,Tubewell water,Tubewell water,Tubewell water,OBJECT CHILD HAND R
+#ffff99,Other food,Other food,Other food,OBJECT CHILD HAND R
+#ffff99,Packaged food,Packaged food,Packaged food,OBJECT CHILD HAND R
+#ffff99,Raw vegetable,Raw vegetable,Raw vegetable,OBJECT CHILD HAND R
+#ffbf80,Chicken,Chicken,Chicken,OBJECT CHILD HAND R
+#ffa64d,Chicken feces,Chicken feces,Chicken feces,OBJECT CHILD HAND R
+<COLUMN>,,,,
+#ccff99,Furniture/brick,Furniture/brick,Furniture/brick,OBJECT CHILD HAND R
+#ccff99,Paper,Paper,Paper,OBJECT CHILD HAND R
+#ccff99,Metal,Metal,Metal,OBJECT CHILD HAND R
+#ccff99,Plant/leaves,Plant/leaves,Plant/leaves,OBJECT CHILD HAND R
+#ffff99,Bakery/Bread,Bakery/Bread,Bakery/Bread,OBJECT CHILD HAND R
+#ffff99,Cooked vegetable,Cooked vegetable,Cooked vegetable,OBJECT CHILD HAND R
+#ffbf80,Goat/Cow,Goat/Cow,Goat/cow,OBJECT CHILD HAND R
+#ffa64d,Goat/cow feces,Goat/cow feces,Goat/cow feces,OBJECT CHILD HAND R
+<COLUMN>,,,,
+#ccff99,Other object,Other object,Other object,OBJECT CHILD HAND R
+#ccff99,Cloth,Cloth,Cloth,OBJECT CHILD HAND R
+#ccff99,Plastic,Plastic,Plastic,OBJECT CHILD HAND R
+#ffff99,Plant sticks,Plant sticks,Plant sticks,OBJECT CHILD HAND R
+#ffff99,Fruit,Fruit,Fruit,OBJECT CHILD HAND R
+#ffff99,Dal,Dal,Dal,OBJECT CHILD HAND R
+#ffbf80,Other animal,Other animal,Other animal,OBJECT CHILD HAND R
+#ffa64d,Other animal feces,Other animal feces,Other animal feces,OBJECT CHILD HAND R
+<COLUMN>,,,,
+#ededed,Not in view,Not in view,Not in view,OBJECT CHILD HAND R
+#9d9d9d,Nothing,Nothing,None,OBJECT CHILD HAND R
+#ffc6bd,Touch,Touch,Touch,INTERACTION CHILD HAND R
+#ff9999,Obj in mouth,Obj in mouth,Obj in mouth,INTERACTION CHILD HAND R
+#ffc6bd,Hand&obj in mouth,Hand&obj in mouth,Hand&obj in mouth,INTERACTION CHILD HAND R
+#ffff99,Rice/Khichuri/Suji/Lota,Rice/Khichuri/Suji/Lota,Rice/Khichuri/Suji/Lota,OBJECT CHILD HAND R
+#ffff80,Urine soil,Urine soil,Urine soil,OBJECT CHILD HAND R
+#ffa64d,Child's feces,Child's feces,Child's feces,OBJECT CHILD HAND R
+<COLUMN>,,,,
+#ffe699,Other's hand/skin,Other's hand/skin,Other's hand/skin,OBJECT CHILD HAND R
+#ffe699,Own hand/skin,Own hand/skin,Own hand/skin,OBJECT CHILD HAND R
+#fb7e00,Soil,Soil,Soil,OBJECT CHILD HAND R
+#fb7e00,Contaminated soil,Contaminated soil,Contaminated soil,OBJECT CHILD HAND R
+#ededed,A,A,A,EVENT
+#ffff99,Dry food,Dry food,Dry food,OBJECT CHILD HAND R
+#ffff99,Fish/meat/egg,Fish/meat/egg,Fish/meat/egg,OBJECT CHILD HAND R
+#ffa64d,Human feces,Human feces,Human feces,OBJECT CHILD HAND R
+<COLUMN>,,,,
+#ffffff,Inside house,Inside house,Inside house,LOCATION
+#ffffff,"Outside - courtyard","Outside - courtyard","Outside - courtyard",LOCATION
+#ffffff,"Outside - small road","Outside - small road","Outside - small road",LOCATION
+#ffffff,"Outside - open contaminated area","Outside - open contaminated area","Outside - open contaminated area",LOCATION
+#ffffff,B,B,B,EVENT
+#bfbfbf,"Utensil &obj in mouth","Utensil &obj in mouth","Utensil &obj in mouth",INTERACTION OTHER HAND
+#bfbfbf,"Other hand &food in mouth","Other hand &food in mouth","Other hand &food in mouth",INTERACTION OTHER HAND
+#ffffff,F,F,F,EVENT
+<COLUMN>,,,,
+#ffffff,"Inside
+not house","Inside
+not house","Inside
+not house",LOCATION
+#ffffff,"Outside - yard outside compound","Outside - yard outside compound","Outside - yard outside compound",LOCATION
+#ffffff,"Outside - big road","Outside - big road","Outside - big road",LOCATION
+#ffffff,"Outside - forest contaminated area","Outside - forest contaminated area","Outside - forest contaminated area",LOCATION
+#ffffff,C,C,C,EVENT
+#bfbfbf,"No contact byother person","No contact byother person","No contact byother person",INTERACTION OTHER HAND
+#ffffff,E,E,E,EVENT
+,END,END,END,END
+<COLUMN>,,,,
+#ffe699,Other's hand/skin,Other's hand/skin,Other's hand/skin,OBJECT CHILD HAND L
+#ffe699,Own hand/skin,Own hand/skin,Own hand/skin,OBJECT CHILD HAND L
+#fb7e00,Soil,Soil,Soil,OBJECT CHILD HAND L
+#fb7e00,Contaminated soil,Contaminated soil,Contaminated soil,OBJECT CHILD HAND L
+#ededed,A,A,A,EVENT
+#ffff99,Dry food,Dry food,Dry food,OBJECT CHILD HAND L
+#ffff99,Fish/meat/egg,Fish/meat/egg,Fish/meat/egg,OBJECT CHILD HAND L
+#ffa64d,Human feces,Human feces,Human feces,OBJECT CHILD HAND L
+<COLUMN>,,,,
+#ededed,Not in view,Not in view,Not in view,OBJECT CHILD HAND L
+#9d9d9d,Nothing,Nothing,None,OBJECT CHILD HAND L
+#ffc6bd,Touch,Touch,Touch,INTERACTION CHILD HAND L
+#ff9999,Obj in mouth,Obj in mouth,Obj in mouth,INTERACTION CHILD HAND L
+#ffc6bd,Hand&obj in mouth,Hand&obj in mouth,Hand&obj in mouth,INTERACTION CHILD HAND L
+#ffff99,Rice/Khichuri/Suji/Lota,Rice/Khichuri/Suji/Lota,Rice/Khichuri/Suji/Lota,OBJECT CHILD HAND L
+#ffff80,Urine soil,Urine soil,Urine soil,OBJECT CHILD HAND L
+#ffa64d,Child's feces,Child's feces,Child's feces,OBJECT CHILD HAND L
+<COLUMN>,,,,
+#ccff99,Other object,Other object,Other object,OBJECT CHILD HAND L
+#ccff99,Cloth,Cloth,Cloth,OBJECT CHILD HAND L
+#ccff99,Plastic,Plastic,Plastic,OBJECT CHILD HAND L
+#ffff99,Plant sticks,Plant sticks,Plant sticks,OBJECT CHILD HAND L
+#ffff99,Fruit,Fruit,Fruit,OBJECT CHILD HAND L
+#ffff99,Dal,Dal,Dal,OBJECT CHILD HAND L
+#ffbf80,Other animal,Other animal,Other animal,OBJECT CHILD HAND L
+#ffa64d,Other animal feces,Other animal feces,Other animal feces,OBJECT CHILD HAND L
+<COLUMN>,,,,
+#ccff99,Furniture/brick,Furniture/brick,Furniture/brick,OBJECT CHILD HAND L
+#ccff99,Paper,Paper,Paper,OBJECT CHILD HAND L
+#ccff99,Metal,Metal,Metal,OBJECT CHILD HAND L
+#ccff99,Plant/leaves,Plant/leaves,Plant/leaves,OBJECT CHILD HAND L
+#ffff99,Bakery/Bread,Bakery/Bread,Bakery/Bread,OBJECT CHILD HAND L
+#ffff99,Cooked vegetable,Cooked vegetable,Cooked vegetable,OBJECT CHILD HAND L
+#ffbf80,Goat/Cow,Goat/Cow,Goat/cow,OBJECT CHILD HAND L
+#ffa64d,Goat/cow feces,Goat/cow feces,Goat/cow feces,OBJECT CHILD HAND L
+<COLUMN>,,,,
+#c7cdff,Other water,Other water,Other water,OBJECT CHILD HAND L
+#c7cdff,Stored water,Stored water,Stored water,OBJECT CHILD HAND L
+#c7cdff,Tubewell water,Tubewell water,Tubewell water,OBJECT CHILD HAND L
+#ffff99,Other food,Other food,Other food,OBJECT CHILD HAND L
+#ffff99,Packaged food,Packaged food,Packaged food,OBJECT CHILD HAND L
+#ffff99,Raw vegetable,Raw vegetable,Raw vegetable,OBJECT CHILD HAND L
+#ffbf80,Chicken,Chicken,Chicken,OBJECT CHILD HAND L
+#ffa64d,Chicken feces,Chicken feces,Chicken feces,OBJECT CHILD HAND L
