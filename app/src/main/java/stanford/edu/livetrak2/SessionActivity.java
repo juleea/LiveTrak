@@ -27,7 +27,7 @@ import java.util.Locale;
 
 public class SessionActivity extends Activity implements LiveTrakConstants {
     private static final String APP_STORAGE_DIR = "LiveTrak/";
-    public static final String CONFIG_FILE = "2014_09_13_LiveTraqWorldBankSOVO1.csv";
+    public static final String CONFIG_FILE = "LiveTrak_soil_v1.csv";
     public static final Language LANG = Language.ENGLISH;
     private static String TAG = "SessionActivity";
     private static File appOutputDir = null;
@@ -168,7 +168,6 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
         Log.i(TAG, "Writing to output: " + str);
         try {
             this.fw.write(new StringBuilder(String.valueOf(str)).append("\n").toString());
-            this.fw.flush();
         } catch (IOException e) {
             displayDialogAndExit("Error writing \"" + str + "\" to output file", "Okay");
             e.printStackTrace();
