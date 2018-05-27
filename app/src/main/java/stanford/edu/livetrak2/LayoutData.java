@@ -83,11 +83,13 @@ public class LayoutData {
     }
 
     private String getColumnLabel(String line) {
+        Log.i(TAG, "getColumnLabel line: " + line);
         String label = line.substring(NEW_COLUMN.length());
         int commaIndex = label.indexOf(",");
         if (commaIndex >= 0) {
             return label.substring(0, commaIndex);
         }
+        Log.i(TAG, "getColumnLabel label: " + label);
         return label;
     }
 }

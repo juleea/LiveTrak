@@ -70,12 +70,14 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
         for (int colIndx = 0; colIndx < numColumns; colIndx++) {
             ColumnData colData = (ColumnData) data.options.get(colIndx);
             LinearLayout col = new LinearLayout(this);
-            col.setOrientation(1);
+            col.setOrientation(LinearLayout.VERTICAL);
             col.setLayoutParams(new LayoutParams(-1, -1, 1.0f));
             TextView text = new TextView(this);
             if (LANG == Language.BANGLA) {
                 text.setTypeface(Typeface.createFromAsset(getAssets(), "font/rupali_01-02-2007.ttf"));
             }
+
+            Log.i(TAG, "COL DATA LABEL: " + colData.label);
             text.setText(colData.label);
             text.setTextSize(17.0f);
             col.addView(text);
@@ -132,12 +134,9 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
         try {
             Log.i(TAG, "Creating filewriter");
             Log.i(TAG, "filename: " + getFilename(intent));
-            //File f = new File(appOutputDir, getFilename(intent));
-            //Log.i(TAG, "mkdirs"+f.mkdirs());
-            Log.i(TAG, "FILE: " + appOutputDir.isDirectory() + appOutputDir.exists());
+            Log.i(TAG, "file path: " + appOutputDir.isDirectory() + appOutputDir.exists());
             FileWriter fw = new FileWriter(appOutputDir + getFilename(intent));
-            Log.i(TAG, "FileWriter created");
-            Log.i(TAG, fw.getClass().toString());
+            Log.i(TAG, "FileWriter created: " + fw.getClass().toString());
             return fw;
         } catch (IOException e) {
             e.printStackTrace();

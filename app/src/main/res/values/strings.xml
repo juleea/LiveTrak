@@ -16,7 +16,7 @@
     <string name="new_session">Start New Session</string>
     <string name="config_dir">ConfigFiles</string>
 
-    <string name="login_activity_session">Login</string>
+    <string name="login_activity_session">LiveTrak2</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

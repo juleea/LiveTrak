@@ -58,9 +58,9 @@
 #ffffff,"Outside - big road","Outside - big road","Outside - big road",LOCATION
 #ffffff,"Outside - forest contaminated area","Outside - forest contaminated area","Outside - forest contaminated area",LOCATION
 #ffffff,C,C,C,EVENT
-#bfbfbf,"No contact byother person","No contact byother person","No contact byother person",INTERACTION OTHER HAND
+#bfbfbf,"No contact by other person","No contact by other person","No contact by other person",INTERACTION OTHER HAND
 #ffffff,E,E,E,EVENT
-,END,END,END,END
+#ff0000,END,END,END,END
 <COLUMN>,,,,
 #ffe699,Other's hand/skin,Other's hand/skin,Other's hand/skin,OBJECT CHILD HAND L
 #ffe699,Own hand/skin,Own hand/skin,Own hand/skin,OBJECT CHILD HAND L
