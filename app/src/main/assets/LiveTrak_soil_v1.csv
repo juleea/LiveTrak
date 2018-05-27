@@ -53,10 +53,7 @@
 #bfbfbf,"Other hand &food in mouth","Other hand &food in mouth","Other hand &food in mouth",INTERACTION OTHER HAND
 #ffffff,F,F,F,EVENT
 <COLUMN>,,,,
-#ffffff,"Inside
-not house","Inside
-not house","Inside
-not house",LOCATION
+#ffffff,"Inside not house","Inside not house","Inside not house",LOCATION
 #ffffff,"Outside - yard outside compound","Outside - yard outside compound","Outside - yard outside compound",LOCATION
 #ffffff,"Outside - big road","Outside - big road","Outside - big road",LOCATION
 #ffffff,"Outside - forest contaminated area","Outside - forest contaminated area","Outside - forest contaminated area",LOCATION
