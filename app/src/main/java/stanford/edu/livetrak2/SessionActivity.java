@@ -2,9 +2,11 @@ package stanford.edu.livetrak2;
 
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
+import android.content.res.AssetManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaCas;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.SystemClock;
@@ -15,9 +17,10 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import stanford.edu.livetrak2.LiveTrakConstants.Language;
+
 import java.io.File;
 import java.io.FileWriter;
+import java.io.InputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -61,14 +64,16 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
         requestWindowFeature(1);
         getWindow().setFlags(1024, 1024);
         HashMap<String, RadioButtonGroup> buttonGroups = new HashMap();
-        LayoutData data = new LayoutData(this, CONFIG_FILE, LANG);
+
+        LayoutData layoutData = loadData(CONFIG_FILE);
+
         LinearLayout grid = new LinearLayout(this);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        int buttonHeight = (int) (((double) metrics.heightPixels) / (((double) (data.maxColItemCount + 3)) * 1.0d));
-        int numColumns = data.options.size();
+        int buttonHeight = (int) (((double) metrics.heightPixels) / (((double) (layoutData.maxColItemCount + 3)) * 1.0d));
+        int numColumns = layoutData.columnDatas.size();
         for (int colIndx = 0; colIndx < numColumns; colIndx++) {
-            ColumnData colData = (ColumnData) data.options.get(colIndx);
+            ColumnData colData = layoutData.columnDatas.get(colIndx);
             LinearLayout col = new LinearLayout(this);
             col.setOrientation(LinearLayout.VERTICAL);
             col.setLayoutParams(new LayoutParams(-1, -1, 1.0f));
@@ -81,9 +86,9 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
             text.setText(colData.label);
             text.setTextSize(17.0f);
             col.addView(text);
-            Iterator it = colData.options.iterator();
+            Iterator<OptionData> it = colData.optionDatas.iterator();
             while (it.hasNext()) {
-                OptionData od = (OptionData) it.next();
+                OptionData od = it.next();
                 RadioButtonX rb = addNewRadioButton(od, buttonGroups);
                 rb.getLayoutParams().height = buttonHeight;
                 if (!(od == null || od.group == null || od.group.equals("") || !od.group.equalsIgnoreCase("end"))) {
@@ -99,6 +104,23 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
         }
         assignButtonGroupsToHandStates(buttonGroups);
         setContentView(grid);
+    }
+
+    private LayoutData loadData(String configFileName) {
+        AssetManager assetManager = getAssets();
+        InputStream inputStream = null;
+        LayoutData layoutData = null;
+
+        try {
+            inputStream = assetManager.open(configFileName);
+            layoutData = (new LayoutCsvParser()).parse(inputStream);  //new LayoutData(this, CONFIG_FILE, LANG);
+        } catch (IOException e) {
+            String errorMsg = "Error: Could not open config file (" + configFileName + ") App will exit.";
+            Log.e(TAG, errorMsg);
+            displayDialogAndExit(errorMsg, "Okay");
+        }
+
+        return layoutData;
     }
 
     private void assignButtonGroupsToHandStates(HashMap<String, RadioButtonGroup> bg) {
@@ -201,10 +223,10 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
     public void recordChange(RadioButtonGroup group) {
         Long observationTime = Long.valueOf(SystemClock.elapsedRealtime());
         if (this.leftHand == null || this.rightHand == null) {
-            Log.e(TAG, "null sadness!!!");
+            Log.w(TAG, "No selections for left nor right hand, so no data is being recorded");
             return;
         }
-        boolean recordChange = this.leftHand.isChanged();
+
         if (this.leftHand.isChanged() || group.equals(this.location)) {
             recordObservation(observationTime, this.location.toString(), this.leftHand.getAndUpdateHandStateString());
         }

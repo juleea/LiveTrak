@@ -1,4 +1,4 @@
-<COLUMN>,,,,
+<COLUMN>LEFT HAND,,,,
 #c7cdff,Other water,Other water,Other water,OBJECT CHILD HAND R
 #c7cdff,Stored water,Stored water,Stored water,OBJECT CHILD HAND R
 #c7cdff,Tubewell water,Tubewell water,Tubewell water,OBJECT CHILD HAND R
@@ -61,7 +61,7 @@
 #bfbfbf,"No contact by other person","No contact by other person","No contact by other person",INTERACTION OTHER HAND
 #ffffff,E,E,E,EVENT
 #ff0000,END,END,END,END
-<COLUMN>,,,,
+<COLUMN>RIGHT HAND,,,,
 #ffe699,Other's hand/skin,Other's hand/skin,Other's hand/skin,OBJECT CHILD HAND L
 #ffe699,Own hand/skin,Own hand/skin,Own hand/skin,OBJECT CHILD HAND L
 #fb7e00,Soil,Soil,Soil,OBJECT CHILD HAND L

@@ -10,15 +10,11 @@ public class OptionData {
     String logMsg;
     String text;
 
-    public OptionData(String color, String displayText, String logMsg, String group) {
-        this.group = group;
-        try {
-            this.color = Color.parseColor(color);
-        } catch (IllegalArgumentException e) {
-            Log.e(this.TAG, new StringBuilder(String.valueOf(color)).append(" is not a valid color").toString());
-            System.exit(0);
-        }
+    public OptionData(int color, String displayText, String logMsg, String group) {
+        Log.i(TAG, String.format("Creating OptionData: color(%s), displayText(%s), logMsg(%s), group(%s)", color, displayText, logMsg, group));
+        this.color = color;
         this.text = displayText;
         this.logMsg = logMsg;
+        this.group = group;
     }
 }

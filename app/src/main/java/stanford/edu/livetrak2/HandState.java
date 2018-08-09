@@ -1,5 +1,7 @@
 package stanford.edu.livetrak2;
 
+import android.util.Log;
+
 public class HandState {
     private RadioButtonGroup frequency;
     private String hand;
@@ -20,6 +22,8 @@ public class HandState {
     }
 
     public boolean isChanged() {
+        Log.i("HAND STATE","previousObservation: " +  this.previousObservation);
+        Log.i("HAND STATE","newObservation: " +  getHandState());
         return !getHandState().equals(this.previousObservation);
     }
 
