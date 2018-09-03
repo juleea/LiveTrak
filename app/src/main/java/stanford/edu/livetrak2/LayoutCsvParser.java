@@ -13,6 +13,7 @@ public class LayoutCsvParser {
     private static final String NEW_COLUMN = "<COLUMN>";
     private static final String SPACE = "<SPACE>";
     private static String TAG = "LayoutData";
+    private static final int CSV_COLUMN_COUNT = 4;
 
     public LayoutData parse(InputStream csvStream) throws IOException, IllegalArgumentException {
         ArrayList<ColumnData> columnDatas = new ArrayList();
@@ -36,9 +37,10 @@ public class LayoutCsvParser {
                     columnData.addOption(null);
                 } else {
                     String[] vals = line.split(",");
-                    int languageIndex = 1; // language.getIndex()
-
-                    OptionData newOptionData = generateOptionData(vals[0], vals[languageIndex], vals[3], vals[4]);
+                    if(vals.length != CSV_COLUMN_COUNT) {
+                        throw new IllegalArgumentException("Invalid CSV line:" + line);
+                    }
+                    OptionData newOptionData = generateOptionData(vals[0], vals[1], vals[2], vals[3]);
                     columnData.addOption(newOptionData);
                 }
             }

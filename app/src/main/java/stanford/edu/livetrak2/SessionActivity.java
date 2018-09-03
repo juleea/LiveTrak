@@ -31,14 +31,13 @@ import java.util.Locale;
 public class SessionActivity extends Activity implements LiveTrakConstants {
     private static final String APP_STORAGE_DIR = "LiveTrak/";
     public static final String CONFIG_FILE = "LiveTrak_soil_v1.csv";
-    public static final Language LANG = Language.ENGLISH;
     private static String TAG = "SessionActivity";
     private static File appOutputDir = null;
     private FileWriter fw;
-    private HandState leftHand = null;
-    private RadioButtonGroup location = null;
-    private HandState rightHand = null;
+    private HashMap<String, RadioButtonGroup> buttonGroups = new HashMap();
+
     private long timeOffset = -1;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +62,6 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
     private void initializeUi(Intent intent) {
         requestWindowFeature(1);
         getWindow().setFlags(1024, 1024);
-        HashMap<String, RadioButtonGroup> buttonGroups = new HashMap();
 
         LayoutData layoutData = loadData(CONFIG_FILE);
 
@@ -78,9 +76,6 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
             col.setOrientation(LinearLayout.VERTICAL);
             col.setLayoutParams(new LayoutParams(-1, -1, 1.0f));
             TextView text = new TextView(this);
-            if (LANG == Language.BANGLA) {
-                text.setTypeface(Typeface.createFromAsset(getAssets(), "font/rupali_01-02-2007.ttf"));
-            }
 
             Log.i(TAG, "COL DATA LABEL: " + colData.label);
             text.setText(colData.label);
@@ -102,7 +97,6 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
             }
             grid.addView(col);
         }
-        assignButtonGroupsToHandStates(buttonGroups);
         setContentView(grid);
     }
 
@@ -113,9 +107,9 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
 
         try {
             inputStream = assetManager.open(configFileName);
-            layoutData = (new LayoutCsvParser()).parse(inputStream);  //new LayoutData(this, CONFIG_FILE, LANG);
+            layoutData = (new LayoutCsvParser()).parse(inputStream);
         } catch (IOException e) {
-            String errorMsg = "Error: Could not open config file (" + configFileName + ") App will exit.";
+            String errorMsg = "Error: Could not open config file (" + configFileName + "). App will exit.";
             Log.e(TAG, errorMsg);
             displayDialogAndExit(errorMsg, "Okay");
         }
@@ -123,15 +117,8 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
         return layoutData;
     }
 
-    private void assignButtonGroupsToHandStates(HashMap<String, RadioButtonGroup> bg) {
-        this.location = (RadioButtonGroup) bg.get("LOCATION");
-        this.leftHand = new HandState(this, "left", (RadioButtonGroup) bg.get("LEFT HAND OBJECT"), (RadioButtonGroup) bg.get("LEFT HAND FREQUENCY"), (RadioButtonGroup) bg.get("LEFT HAND INTERACTION"));
-        this.rightHand = new HandState(this, "right", (RadioButtonGroup) bg.get("RIGHT HAND OBJECT"), (RadioButtonGroup) bg.get("RIGHT HAND FREQUENCY"), (RadioButtonGroup) bg.get("RIGHT HAND INTERACTION"));
-    }
-
     private RadioButtonX addNewRadioButton(OptionData od, HashMap<String, RadioButtonGroup> groups) {
         RadioButtonX rb = new RadioButtonX(this, od);
-        rb.setTypeface(Typeface.createFromAsset(getAssets(), "font/rupali_01-02-2007.ttf"));
         rb.setPadding(rb.getPaddingLeft(), rb.getPaddingTop(), rb.getPaddingRight(), 0);
         if (!(od == null || od.group == null || od.group.equalsIgnoreCase("END"))) {
             RadioButtonGroup rbg;
@@ -202,11 +189,31 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
         writeLineToOutput("Elapsed time (ms), Location, Observation");
     }
 
-    private void recordObservation(Long observationTime, String location, String handObservation) {
+    public void recordChange(RadioButtonGroup group) {
+        Long observationTime = Long.valueOf(SystemClock.elapsedRealtime());
+
+        for(RadioButtonGroup g : buttonGroups.values()) {
+            if (!g.isChecked()) {
+                //Do not record an observation if a radio button group does not have a selectio
+                return;
+            }
+        }
+
+        if (this.timeOffset < 0) {
+            //for the first observation, record everything
+            for(RadioButtonGroup g : buttonGroups.values()) {
+                recordObservation(observationTime, g.groupName, g.getCheckedRadioButton().toString());
+            }
+        } else {
+            recordObservation(observationTime, group.groupName, group.getCheckedRadioButton().toString());
+        }
+    }
+
+    private void recordObservation(Long observationTime, String radioButtonGroupName, String selectedOption) {
         if (this.timeOffset < 0) {
             writeOutputHeader(observationTime);
         }
-        writeLineToOutput(new StringBuilder(String.valueOf(observationTime.longValue() - this.timeOffset)).append(",").append(location).append(",").append(handObservation).toString());
+        writeLineToOutput(new StringBuilder(String.valueOf(observationTime.longValue() - this.timeOffset)).append(",").append(radioButtonGroupName).append(",").append(selectedOption).toString());
     }
 
     private void endSession(View v) {
@@ -218,20 +225,5 @@ public class SessionActivity extends Activity implements LiveTrakConstants {
             e.printStackTrace();
         }
         startActivity(new Intent(this, LoginActivity.class));
-    }
-
-    public void recordChange(RadioButtonGroup group) {
-        Long observationTime = Long.valueOf(SystemClock.elapsedRealtime());
-        if (this.leftHand == null || this.rightHand == null) {
-            Log.w(TAG, "No selections for left nor right hand, so no data is being recorded");
-            return;
-        }
-
-        if (this.leftHand.isChanged() || group.equals(this.location)) {
-            recordObservation(observationTime, this.location.toString(), this.leftHand.getAndUpdateHandStateString());
-        }
-        if (this.rightHand.isChanged() || group.equals(this.location)) {
-            recordObservation(observationTime, this.location.toString(), this.rightHand.getAndUpdateHandStateString());
-        }
     }
 }

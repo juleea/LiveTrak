@@ -18,17 +18,7 @@ public class RadioButtonGroup {
     }
 
     public void addButton(RadioButtonX button) {
-        if (!this.buttons.contains(button)) {
-            this.buttons.add(button);
-        }
-        if (button.isChecked()) {
-            this.mProtectFromCheckedChange = true;
-            if (this.checkedView != null) {
-                this.checkedView.setChecked(false);
-            }
-            this.mProtectFromCheckedChange = false;
-            setCheckedView(button);
-        }
+        this.buttons.add(button);
         button.setGroup(this);
     }
 
@@ -44,10 +34,6 @@ public class RadioButtonGroup {
         }
     }
 
-    private void setCheckedView(RadioButtonX b) {
-        this.checkedView = b;
-    }
-
     public View getCheckedRadioButton() {
         return this.checkedView;
     }
@@ -61,5 +47,9 @@ public class RadioButtonGroup {
 
     public boolean isChecked() {
         return this.checkedView != null;
+    }
+
+    private void setCheckedView(RadioButtonX b) {
+        this.checkedView = b;
     }
 }

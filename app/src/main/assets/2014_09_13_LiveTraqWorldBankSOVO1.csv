@@ -1,99 +1,99 @@
-<COLUMN>LEFT HAND,,,,
-#ccff99,Paper,Paper,Paper,LEFT HAND OBJECT
-#ccff99,Other object,Other object,Other object,LEFT HAND OBJECT
-#ffff99,Juice,Juice,Juice,LEFT HAND OBJECT
-#ffff99,Packaged food,Packaged food,Packaged food,LEFT HAND OBJECT
-#ffff99,Raw vegetable,Raw vegetable,Raw vegetable,LEFT HAND OBJECT
-#ffff99,Food waste,Food waste,Food waste,LEFT HAND OBJECT
-#ffff99,Fish/meat/egg,Fish/meat/egg,Fish/meat/egg,LEFT HAND OBJECT
-#ffff99,Other food,Other food,Other food,LEFT HAND OBJECT
-#c7cdff,Other water,Other water,Other water,LEFT HAND OBJECT
-#c7cdff,Stored water,Stored water,Stored water,LEFT HAND OBJECT
-<COLUMN>,,,,
-#ccff99,Metal,Metal,Metal,LEFT HAND OBJECT
-#ccff99,Cloth,Cloth,Cloth,LEFT HAND OBJECT
-#ccff99,Brick/concrete,Brick/concrete,Brick/concrete,LEFT HAND OBJECT
-#ffff99,Bakery,Bakery,Bakery,LEFT HAND OBJECT
-#ffff99,Cooked vegetable,Cooked vegetable,Cooked vegetable,LEFT HAND OBJECT
-#ffff99,Dry food,Dry food,Dry food,LEFT HAND OBJECT
-#ffff99,Dal,Dal,Dal,LEFT HAND OBJECT
-#ffbf80,Other animal,Other animal,Other animal,LEFT HAND OBJECT
-#ffa64d,Other animal feces,Other animal feces,Other animal feces,LEFT HAND OBJECT
-#c7cdff,Tubewell water,Tubewell water,Tubewell water,LEFT HAND OBJECT
-<COLUMN>,,,,
-#ccff99,Plant material,Plant material,Plant material,LEFT HAND OBJECT
-#9d9d9d,Nothing,Nothing,None,LEFT HAND OBJECT
-#ccff99,Plastic,Plastic,Plastic,LEFT HAND OBJECT
-#ffff99,Fruit,Fruit,Fruit,LEFT HAND OBJECT
-#ffff99,Rice/Khichuri,Rice/Khichuri,Rice/Khichuri,LEFT HAND OBJECT
-#ffff99,Suji/Lota,Suji/Lota,Suji/Lota,LEFT HAND OBJECT
-#ffff99,Pickles,Pickles,Pickles,LEFT HAND OBJECT
-#ffbf80,Goat/Cow,Goat/Cow,Goat/cow,LEFT HAND OBJECT
-#ffa64d,Goat/Cow,Goat/Cow,Goat/Cow,LEFT HAND OBJECT
-#ffa64d,Human feces,Human feces,Human feces,LEFT HAND OBJECT
-<COLUMN>,,,,
-#fb7e00,Soil,Soil,Soil,LEFT HAND OBJECT
-#ffc6bd,Touch,Touch,Touch,LEFT HAND INTERACTION
-#ff9999,Object in mouth,Object in mouth,Object in mouth,LEFT HAND INTERACTION
-#ffc6bd,Hand&object in mouth,Hand&object in mouth,Hand&object in mouth,LEFT HAND INTERACTION
-#ffc6bd,Utensil&obj in mouth,Utensil&obj in mouth,Utensil&obj in mouth,LEFT HAND INTERACTION
-#ffff99,Breastmilk,Breastmilk,Breastmilk,LEFT HAND OBJECT
-#ffff99,Milk/formula,Milk/formula,Milk/formula,LEFT HAND OBJECT
-#ffbf80,Chicken,Chicken,Chicken,LEFT HAND OBJECT
-#ffa64d,Chicken feces,Chicken feces,Chicken feces,LEFT HAND OBJECT
-#ffa64d,Child's feces,Child's feces,Child's feces,LEFT HAND OBJECT
-<COLUMN>,,,,
-#ededed,R-Not in view,R-Not in view,R-Not in view,RIGHT HAND OBJECT
-#ffe699,R-Own hand/skin,R-Own hand/skin,R-Own hand/skin,RIGHT HAND OBJECT
-#ffe699,R-Other's hand/skin,R-Other's hand/skin,R-Other's hand/skin,RIGHT HAND OBJECT
-#ededed,L-Not in view,L-Not in view,L-Not in view,LEFT HAND OBJECT
-#ffe699,L-Own hand/skin,L-Own hand/skin,L-Own hand/skin,LEFT HAND OBJECT
-#ffe699,L-Other's hand/skin,L-Other's hand/skin,L-Other's hand/skin,LEFT HAND OBJECT
-#ffffff,Inside,Inside,Inside,LOCATION
-#ffffff,Outside,Outside,Outside,LOCATION
-<SPACE>,,,,
-#9998ff,END,END,END,END
-<COLUMN>RIGHT HAND,,,,
-#fb7e00,Soil,Soil,Soil,RIGHT HAND OBJECT
-#ffc6bd,Touch,Touch,Touch,RIGHT HAND INTERACTION
-#ff9999,Object in mouth,Object in mouth,Object in mouth,RIGHT HAND INTERACTION
-#ffc6bd,Hand&object in mouth,Hand&object in mouth,Hand&object in mouth,RIGHT HAND INTERACTION
-#ff9999,Utensil&obj in mouth,Utensil&obj in mouth,Utensil&obj in mouth,RIGHT HAND INTERACTION
-#ffff99,Breastmilk,Breastmilk,Breastmilk,RIGHT HAND OBJECT
-#ffff99,Milk/formula,Milk/formula,Milk/formula,RIGHT HAND OBJECT
-#ffbf80,Chicken,Chicken,Chicken,RIGHT HAND OBJECT
-#ffa64d,Chicken feces,Chicken feces,Chicken feces,RIGHT HAND OBJECT
-#ffa64d,Child feces,Child feces,Child feces,RIGHT HAND OBJECT
-<COLUMN>,,,,
-#ccff99,Plant material,Plant material,Plant material,RIGHT HAND OBJECT
-#9d9d9d,Nothing,Nothing,None,RIGHT HAND OBJECT
-#ccff99,Plastic,Plastic,Plastic,RIGHT HAND OBJECT
-#ffff99,Fruit,Fruit,Fruit,RIGHT HAND OBJECT
-#ffff99,Rice/khichuri,Rice/khichuri,Rice/khichuri,RIGHT HAND OBJECT
-#ffff99,Suji/lota,Suji/lota,Suji/lota,RIGHT HAND OBJECT
-#ffff99,Pickles,Pickles,Pickles,RIGHT HAND OBJECT
-#ffbf80,Goat/cow,Goat/cow,Goat/cow,RIGHT HAND OBJECT
-#ffa64d,Goat/cow feces,Goat/cow feces,Goat/cow feces,RIGHT HAND OBJECT
-#ffa64d,Human feces,Human feces,Human feces,RIGHT HAND OBJECT
-<COLUMN>,,,,
-#ccff99,Metal,Metal,Metal,RIGHT HAND OBJECT
-#ccff99,Cloth,Cloth,Cloth,RIGHT HAND OBJECT
-#ccff99,Brick/concrete,Brick/concrete,Brick/concrete,RIGHT HAND OBJECT
-#ffff99,Bakery,Bakery,Bakery,RIGHT HAND OBJECT
-#ffff99,Cooked vegetable,Cooked vegetable,Cooked vegetable,RIGHT HAND OBJECT
-#ffff99,Dry food,Dry food,Dry food,RIGHT HAND OBJECT
-#ffff99,Dal,Dal,Dal,RIGHT HAND OBJECT
-#ffbf80,Other animal,Other animal,Other animal,RIGHT HAND OBJECT
-#ffa64d,Other animal feces,Other animal feces,Other animal feces,RIGHT HAND OBJECT
-#c7cdff,Tubewell water,Tubewell water,Tubewell water,RIGHT HAND OBJECT
-<COLUMN>,,,,
-#ccff99,Paper,Paper,Paper,RIGHT HAND OBJECT
-#ccff99,Other object,Other object,Other object,RIGHT HAND OBJECT
-#ffff99,Juice,Juice,Juice,RIGHT HAND OBJECT
-#ffff99,Packaged food,Packaged food,Packaged food,RIGHT HAND OBJECT
-#ffff99,Raw vegetable,Raw vegetable,Raw vegetable,RIGHT HAND OBJECT
-#ffff99,Food waste,Food waste,Food waste,RIGHT HAND OBJECT
-#ffff99,Fish/meat/egg,Fish/meat/egg,Fish/meat/egg,RIGHT HAND OBJECT
-#ffff99,Other food,Other food,Other food,RIGHT HAND OBJECT
-#c7cdff,Other water,Other water,Other water,RIGHT HAND OBJECT
-#c7cdff,Stored water,Stored water,Stored water,RIGHT HAND OBJECT
+<COLUMN>LEFT HAND,,,
+#ccff99,Paper,Paper,LEFT HAND OBJECT
+#ccff99,Other object,Other object,LEFT HAND OBJECT
+#ffff99,Juice,Juice,LEFT HAND OBJECT
+#ffff99,Packaged food,Packaged food,LEFT HAND OBJECT
+#ffff99,Raw vegetable,Raw vegetable,LEFT HAND OBJECT
+#ffff99,Food waste,Food waste,LEFT HAND OBJECT
+#ffff99,Fish/meat/egg,Fish/meat/egg,LEFT HAND OBJECT
+#ffff99,Other food,Other food,LEFT HAND OBJECT
+#c7cdff,Other water,Other water,LEFT HAND OBJECT
+#c7cdff,Stored water,Stored water,LEFT HAND OBJECT
+<COLUMN>,,,
+#ccff99,Metal,Metal,LEFT HAND OBJECT
+#ccff99,Cloth,Cloth,LEFT HAND OBJECT
+#ccff99,Brick/concrete,Brick/concrete,LEFT HAND OBJECT
+#ffff99,Bakery,Bakery,LEFT HAND OBJECT
+#ffff99,Cooked vegetable,Cooked vegetable,LEFT HAND OBJECT
+#ffff99,Dry food,Dry food,LEFT HAND OBJECT
+#ffff99,Dal,Dal,LEFT HAND OBJECT
+#ffbf80,Other animal,Other animal,LEFT HAND OBJECT
+#ffa64d,Other animal feces,Other animal feces,LEFT HAND OBJECT
+#c7cdff,Tubewell water,Tubewell water,LEFT HAND OBJECT
+<COLUMN>,,,
+#ccff99,Plant material,Plant material,LEFT HAND OBJECT
+#9d9d9d,Nothing,None,LEFT HAND OBJECT
+#ccff99,Plastic,Plastic,LEFT HAND OBJECT
+#ffff99,Fruit,Fruit,LEFT HAND OBJECT
+#ffff99,Rice/Khichuri,Rice/Khichuri,LEFT HAND OBJECT
+#ffff99,Suji/Lota,Suji/Lota,LEFT HAND OBJECT
+#ffff99,Pickles,Pickles,LEFT HAND OBJECT
+#ffbf80,Goat/Cow,Goat/cow,LEFT HAND OBJECT
+#ffa64d,Goat/Cow,Goat/Cow,LEFT HAND OBJECT
+#ffa64d,Human feces,Human feces,LEFT HAND OBJECT
+<COLUMN>,,,
+#fb7e00,Soil,Soil,LEFT HAND OBJECT
+#ffc6bd,Touch,Touch,LEFT HAND INTERACTION
+#ff9999,Object in mouth,Object in mouth,LEFT HAND INTERACTION
+#ffc6bd,Hand&object in mouth,Hand&object in mouth,LEFT HAND INTERACTION
+#ffc6bd,Utensil&obj in mouth,Utensil&obj in mouth,LEFT HAND INTERACTION
+#ffff99,Breastmilk,Breastmilk,LEFT HAND OBJECT
+#ffff99,Milk/formula,Milk/formula,LEFT HAND OBJECT
+#ffbf80,Chicken,Chicken,LEFT HAND OBJECT
+#ffa64d,Chicken feces,Chicken feces,LEFT HAND OBJECT
+#ffa64d,Child's feces,Child's feces,LEFT HAND OBJECT
+<COLUMN>,,,
+#ededed,R-Not in view,R-Not in view,RIGHT HAND OBJECT
+#ffe699,R-Own hand/skin,R-Own hand/skin,RIGHT HAND OBJECT
+#ffe699,R-Other's hand/skin,R-Other's hand/skin,RIGHT HAND OBJECT
+#ededed,L-Not in view,L-Not in view,LEFT HAND OBJECT
+#ffe699,L-Own hand/skin,L-Own hand/skin,LEFT HAND OBJECT
+#ffe699,L-Other's hand/skin,L-Other's hand/skin,LEFT HAND OBJECT
+#ffffff,Inside,Inside,LOCATION
+#ffffff,Outside,Outside,LOCATION
+<SPACE>,,,
+#9998ff,END,END,END
+<COLUMN>RIGHT HAND,,,
+#fb7e00,Soil,Soil,RIGHT HAND OBJECT
+#ffc6bd,Touch,Touch,RIGHT HAND INTERACTION
+#ff9999,Object in mouth,Object in mouth,RIGHT HAND INTERACTION
+#ffc6bd,Hand&object in mouth,Hand&object in mouth,RIGHT HAND INTERACTION
+#ff9999,Utensil&obj in mouth,Utensil&obj in mouth,RIGHT HAND INTERACTION
+#ffff99,Breastmilk,Breastmilk,RIGHT HAND OBJECT
+#ffff99,Milk/formula,Milk/formula,RIGHT HAND OBJECT
+#ffbf80,Chicken,Chicken,RIGHT HAND OBJECT
+#ffa64d,Chicken feces,Chicken feces,RIGHT HAND OBJECT
+#ffa64d,Child feces,Child feces,RIGHT HAND OBJECT
+<COLUMN>,,,
+#ccff99,Plant material,Plant material,RIGHT HAND OBJECT
+#9d9d9d,Nothing,None,RIGHT HAND OBJECT
+#ccff99,Plastic,Plastic,RIGHT HAND OBJECT
+#ffff99,Fruit,Fruit,RIGHT HAND OBJECT
+#ffff99,Rice/khichuri,Rice/khichuri,RIGHT HAND OBJECT
+#ffff99,Suji/lota,Suji/lota,RIGHT HAND OBJECT
+#ffff99,Pickles,Pickles,RIGHT HAND OBJECT
+#ffbf80,Goat/cow,Goat/cow,RIGHT HAND OBJECT
+#ffa64d,Goat/cow feces,Goat/cow feces,RIGHT HAND OBJECT
+#ffa64d,Human feces,Human feces,RIGHT HAND OBJECT
+<COLUMN>,,,
+#ccff99,Metal,Metal,RIGHT HAND OBJECT
+#ccff99,Cloth,Cloth,RIGHT HAND OBJECT
+#ccff99,Brick/concrete,Brick/concrete,RIGHT HAND OBJECT
+#ffff99,Bakery,Bakery,RIGHT HAND OBJECT
+#ffff99,Cooked vegetable,Cooked vegetable,RIGHT HAND OBJECT
+#ffff99,Dry food,Dry food,RIGHT HAND OBJECT
+#ffff99,Dal,Dal,RIGHT HAND OBJECT
+#ffbf80,Other animal,Other animal,RIGHT HAND OBJECT
+#ffa64d,Other animal feces,Other animal feces,RIGHT HAND OBJECT
+#c7cdff,Tubewell water,Tubewell water,RIGHT HAND OBJECT
+<COLUMN>,,,
+#ccff99,Paper,Paper,RIGHT HAND OBJECT
+#ccff99,Other object,Other object,RIGHT HAND OBJECT
+#ffff99,Juice,Juice,RIGHT HAND OBJECT
+#ffff99,Packaged food,Packaged food,RIGHT HAND OBJECT
+#ffff99,Raw vegetable,Raw vegetable,RIGHT HAND OBJECT
+#ffff99,Food waste,Food waste,RIGHT HAND OBJECT
+#ffff99,Fish/meat/egg,Fish/meat/egg,RIGHT HAND OBJECT
+#ffff99,Other food,Other food,RIGHT HAND OBJECT
+#c7cdff,Other water,Other water,RIGHT HAND OBJECT
+#c7cdff,Stored water,Stored water,RIGHT HAND OBJECT
